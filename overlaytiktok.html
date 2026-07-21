@@ -26,17 +26,6 @@
       transform-origin: top left;
     }
 
-    /* 🎆 FUEGOS */
-    .firework {
-      top: -40px;
-      left: -80px;
-      width: 720px;
-      height: 260px;
-      transform: scale(1.6);
-      z-index: 10;
-      pointer-events: none;
-    }
-
     /* 🔥 ACCIONES */
     .acciones {
       top: 80px;
@@ -73,22 +62,13 @@
       transform: scale(0.8);
     }
 
-    /* 🎯 META (poquito más abajo) */
+    /* 🎯 META */
     .meta {
-      top: 540px; /* antes 520 */
+      top: 540px;
       left: -10px;
       width: 500px;
       height: 200px;
       transform: scale(0.85);
-    }
-
-    /* 🎠 DESLIZADOR */
-    .carousel {
-      top: 520px;
-      left: 420px;
-      width: 600px;
-      height: 220px;
-      transform: scale(0.45);
     }
 
     /* ================= DERECHA ================= */
@@ -115,9 +95,6 @@
 <body>
   <div class="canvas">
 
-    <iframe class="firework"
-      src="https://tikfinity.zerody.one/widget/firework?cid=1638627"></iframe>
-
     <iframe class="acciones"
       src="https://tikfinity.zerody.one/widget/myactions?cid=1638627&screen=1"></iframe>
 
@@ -133,9 +110,7 @@
     <iframe class="meta"
       src="https://tikfinity.zerody.one/widget/goal?cid=1638627&metric=coins"></iframe>
 
-    <iframe class="carousel"
-      src="https://tikfinity.zerody.one/widget/carousel?cid=1638627"></iframe>
-
+    <!-- DERECHA -->
     <div class="right-panel"></div>
 
     <iframe class="youtube"

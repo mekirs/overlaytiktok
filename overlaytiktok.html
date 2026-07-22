@@ -8,7 +8,7 @@
     html, body {
       margin: 0;
       padding: 0;
-      width: 1440px;
+      width: 720px;
       height: 1280px;
       background: transparent;
       overflow: hidden;
@@ -16,7 +16,7 @@
 
     .canvas {
       position: relative;
-      width: 1440px;
+      width: 720px;
       height: 1280px;
     }
 
@@ -29,7 +29,7 @@
     /* 🔥 ACCIONES */
     .acciones {
       top: 80px;
-      left: 360px;
+      left: 50%;
       transform: translateX(-50%);
       width: 500px;
       height: 150px;
@@ -53,13 +53,13 @@
       transform: scale(0.7);
     }
 
-    /* 💬 CHAT */
+    /* 💬 CHAT (un poco más grande) */
     .chat {
       top: 600px;
       left: 0px;
-      width: 260px;
-      height: 400px;
-      transform: scale(0.8);
+      width: 280px;   /* antes 260 */
+      height: 420px;  /* antes 400 */
+      transform: scale(0.9); /* antes 0.8 */
     }
 
     /* 🎯 META */
@@ -69,24 +69,6 @@
       width: 500px;
       height: 200px;
       transform: scale(0.85);
-    }
-
-    /* ================= DERECHA ================= */
-
-    .right-panel {
-      position: absolute;
-      left: 720px;
-      top: 0;
-      width: 720px;
-      height: 1280px;
-      background: rgba(0,0,0,0.4);
-    }
-
-    .youtube {
-      top: 0;
-      left: 720px;
-      width: 720px;
-      height: 1280px;
     }
 
   </style>
@@ -109,15 +91,6 @@
 
     <iframe class="meta"
       src="https://tikfinity.zerody.one/widget/goal?cid=1638627&metric=coins"></iframe>
-
-    <!-- DERECHA -->
-    <div class="right-panel"></div>
-
-    <iframe class="youtube"
-      src="https://www.youtube.com/embed/videoseries?list=PLpDQJRSYgGF9WbOjwrZLW8igv_jDk182T"
-      allow="autoplay; encrypted-media"
-      allowfullscreen>
-    </iframe>
 
   </div>
 </body>

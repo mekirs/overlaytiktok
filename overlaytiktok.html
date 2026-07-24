@@ -57,10 +57,10 @@
       z-index: 5;
     }
 
-    /* 💬 CONTENEDOR CHAT (recorte arriba) */
+    /* 💬 CHAT (más abajo) */
     .chat-wrap {
       position: absolute;
-      top: 210px;
+      top: 250px; /* antes 210 */
       left: -5px;
       width: 240px;
       height: 320px;
@@ -68,7 +68,7 @@
     }
 
     .chat-wrap iframe {
-      top: -80px; /* 🔥 corta la parte de arriba */
+      top: -80px;
       left: 0;
       width: 280px;
       height: 420px;
@@ -76,7 +76,7 @@
       transform-origin: top left;
     }
 
-    /* 💰 DONANTES (más a la derecha) */
+    /* 💰 DONANTES */
     .topgifter {
       top: 170px;
       right: -70px;
@@ -85,7 +85,7 @@
       transform: scale(0.7);
     }
 
-    /* ❤️ LIKES (también más a la derecha) */
+    /* ❤️ LIKES */
     .topliker {
       top: 310px;
       right: -70px;
@@ -94,10 +94,10 @@
       transform: scale(0.7);
     }
 
-    /* 🎯 META */
+    /* 🎯 META (más pegada izquierda) */
     .meta {
       top: 540px;
-      left: -10px;
+      left: -20px; /* antes -10 */
       width: 500px;
       height: 200px;
       transform: scale(0.85);
@@ -118,7 +118,7 @@
     <iframe class="alerts"
       src="https://app.streamtoearn.io/overlay/6a507be13a91eda3b1c241c9/alerts/1"></iframe>
 
-    <!-- CHAT RECORTADO -->
+    <!-- CHAT -->
     <div class="chat-wrap">
       <iframe src="https://tikfinity.zerody.one/widget/chat?cid=1638627"></iframe>
     </div>

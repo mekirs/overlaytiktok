@@ -24,6 +24,28 @@
       position: absolute;
       border: none;
       transform-origin: top left;
+      background: transparent;
+    }
+
+    /* 🎆 FUEGOS (arriba centro) */
+    .firework {
+      top: -20px;
+      left: 50%;
+      transform: translateX(-50%) scale(1.3);
+      width: 720px;
+      height: 250px;
+      pointer-events: none;
+      z-index: 10;
+    }
+
+    /* 🔔 ALERTS (centrado junto a acciones) */
+    .alerts {
+      top: 140px;
+      left: 50%;
+      transform: translateX(-50%) scale(0.9);
+      width: 500px;
+      height: 200px;
+      z-index: 6;
     }
 
     /* 🔥 ACCIONES */
@@ -33,15 +55,7 @@
       transform: translateX(-50%);
       width: 500px;
       height: 150px;
-    }
-
-    /* 🚨 ALERTS (al costado de acciones) */
-    .alerts {
-      top: 80px;
-      left: 520px; /* a la derecha de acciones */
-      width: 200px;
-      height: 150px;
-      transform: scale(0.8);
+      z-index: 5;
     }
 
     /* 💰 DONANTES */
@@ -86,22 +100,31 @@
 <body>
   <div class="canvas">
 
+    <!-- FUEGOS -->
+    <iframe class="firework"
+      src="https://tikfinity.zerody.one/widget/firework?cid=1638627"></iframe>
+
+    <!-- ACCIONES -->
     <iframe class="acciones"
       src="https://tikfinity.zerody.one/widget/myactions?cid=1638627&screen=1"></iframe>
 
-    <!-- ALERTAS NUEVAS -->
+    <!-- ALERTS -->
     <iframe class="alerts"
       src="https://app.streamtoearn.io/overlay/6a507be13a91eda3b1c241c9/alerts/1"></iframe>
 
+    <!-- DONANTES -->
     <iframe class="topgifter"
       src="https://tikfinity.zerody.one/widget/topgifter?cid=1638627"></iframe>
 
+    <!-- LIKES -->
     <iframe class="topliker"
       src="https://tikfinity.zerody.one/widget/topliker?cid=1638627"></iframe>
 
+    <!-- CHAT -->
     <iframe class="chat"
       src="https://tikfinity.zerody.one/widget/chat?cid=1638627"></iframe>
 
+    <!-- META -->
     <iframe class="meta"
       src="https://tikfinity.zerody.one/widget/goal?cid=1638627&metric=coins"></iframe>
 

@@ -1,137 +1,99 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <title>Overlay TikTok Mekirs</title>
+<style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    width: 720px;
+    height: 1280px;
+    background: transparent;
+    overflow: hidden;
+  }
 
-  <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      width: 720px;
-      height: 1280px;
-      background: transparent;
-      overflow: hidden;
-    }
+  .canvas {
+    position: relative;
+    width: 720px;
+    height: 1280px;
+  }
 
-    .canvas {
-      position: relative;
-      width: 720px;
-      height: 1280px;
-    }
+  iframe {
+    position: absolute;
+    border: none;
+    background: transparent;
+  }
 
-    iframe {
-      position: absolute;
-      border: none;
-      background: transparent;
-    }
+  /* 🎆 FUEGOS */
+  .firework {
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%) scale(1.5);
+    width: 720px;
+    height: 250px;
+    pointer-events: none;
+    z-index: 10;
+  }
 
-    /* 🎆 FUEGOS */
-    .firework {
-      top: -30px;
-      left: 50%;
-      transform: translateX(-50%) scale(1.5);
-      width: 720px;
-      height: 250px;
-      pointer-events: none;
-      z-index: 10;
-    }
+  /* 🔔 ALERTS */
+  .alerts {
+    top: 140px;
+    left: 50%;
+    transform: translateX(-50%) scale(0.9);
+    width: 500px;
+    height: 200px;
+    z-index: 6;
+  }
 
-    /* 🔔 ALERTS */
-    .alerts {
-      top: 140px;
-      left: 50%;
-      transform: translateX(-50%) scale(0.9);
-      width: 500px;
-      height: 200px;
-      z-index: 6;
-    }
+  /* 🔥 ACCIONES */
+  .acciones {
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 500px;
+    height: 150px;
+    z-index: 5;
+  }
 
-    /* 🔥 ACCIONES */
-    .acciones {
-      top: 80px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 500px;
-      height: 150px;
-      z-index: 5;
-    }
+  /* 💬 CHAT (ARREGLADO) */
+  .chat-wrap {
+    position: absolute;
+    top: 310px;
+    left: 0px;
+    width: 280px;
+    height: 420px;
+    overflow: visible; /* 👈 clave */
+  }
 
-    /* 💬 CHAT (más arriba + más grande) */
-    .chat-wrap {
-      position: absolute;
-      top: 310px;
-      left: -5px;
-      width: 260px;   /* un poco más ancho */
-      height: 380px;  /* más alto */
-      overflow: hidden;
-    }
+  .chat-wrap iframe {
+    width: 280px;
+    height: 420px;
+    transform: scale(0.85);
+    transform-origin: top left;
+    top: 0; /* 👈 quitado el -40 */
+    left: 0;
+  }
 
-    .chat-wrap iframe {
-      top: -40px; /* menos recorte */
-      left: 0;
-      width: 280px;
-      height: 420px;
-      transform: scale(0.8); /* más grande */
-      transform-origin: top left;
-    }
+  /* 💰 TOP GIFTERS (más grande y más arriba) */
+  .topgifter {
+    top: 120px;
+    right: -40px;
+    width: 340px;
+    height: 230px;
+    transform: scale(0.95);
+  }
 
-    /* 💰 DONANTES (más grandes) */
-    .topgifter {
-      top: 170px;
-      right: -70px;
-      width: 300px;
-      height: 200px;
-      transform: scale(0.8);
-    }
+  /* ❤️ TOP LIKERS (más grande y alineado) */
+  .topliker {
+    top: 340px;
+    right: -40px;
+    width: 340px;
+    height: 230px;
+    transform: scale(0.95);
+  }
 
-    /* ❤️ LIKES (más grandes) */
-    .topliker {
-      top: 310px;
-      right: -70px;
-      width: 300px;
-      height: 200px;
-      transform: scale(0.8);
-    }
-
-    /* 🎯 META */
-    .meta {
-      top: 520px;
-      left: -60px;
-      width: 500px;
-      height: 200px;
-      transform: scale(0.85);
-    }
-
-  </style>
-</head>
-
-<body>
-  <div class="canvas">
-
-    <iframe class="firework"
-      src="https://tikfinity.zerody.one/widget/firework?cid=1638627"></iframe>
-
-    <iframe class="acciones"
-      src="https://tikfinity.zerody.one/widget/myactions?cid=1638627&screen=1"></iframe>
-
-    <iframe class="alerts"
-      src="https://app.streamtoearn.io/overlay/6a507be13a91eda3b1c241c9/alerts/1"></iframe>
-
-    <!-- CHAT -->
-    <div class="chat-wrap">
-      <iframe src="https://tikfinity.zerody.one/widget/chat?cid=1638627"></iframe>
-    </div>
-
-    <iframe class="topgifter"
-      src="https://tikfinity.zerody.one/widget/topgifter?cid=1638627"></iframe>
-
-    <iframe class="topliker"
-      src="https://tikfinity.zerody.one/widget/topliker?cid=1638627"></iframe>
-
-    <iframe class="meta"
-      src="https://tikfinity.zerody.one/widget/goal?cid=1638627&metric=coins"></iframe>
-
-  </div>
-</body>
-</html>
+  /* 🎯 META */
+  .meta {
+    top: 560px;
+    left: -60px;
+    width: 500px;
+    height: 200px;
+    transform: scale(0.85);
+  }
+</style>

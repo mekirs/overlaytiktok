@@ -37,19 +37,9 @@
       z-index: 10;
     }
 
-    /* 🔔 ALERTS */
-    .alerts {
-      top: 130px;
-      left: 50%;
-      transform: translateX(-50%) scale(0.95);
-      width: 500px;
-      height: 200px;
-      z-index: 6;
-    }
-
     /* 🔥 ACCIONES */
     .acciones {
-      top: 70px;
+      top: 65px;
       left: 50%;
       transform: translateX(-50%);
       width: 520px;
@@ -57,14 +47,24 @@
       z-index: 5;
     }
 
-    /* 💬 CHAT (más arriba y sin recorte) */
+    /* 🔔 ALERTS */
+    .alerts {
+      top: 120px;
+      left: 50%;
+      transform: translateX(-50%) scale(0.95);
+      width: 500px;
+      height: 200px;
+      z-index: 6;
+    }
+
+    /* 💬 CHAT (más arriba) */
     .chat-wrap {
       position: absolute;
-      top: 270px;   /* 🔼 subido */
+      top: 220px;   /* 🔼 SUBIDO MÁS */
       left: -5px;
       width: 270px;
       height: 420px;
-      overflow: visible; /* 🔧 evita corte */
+      overflow: visible;
       z-index: 7;
     }
 
@@ -73,27 +73,27 @@
       left: 0;
       width: 300px;
       height: 460px;
-      transform: scale(0.9); /* un poco más grande */
+      transform: scale(0.9);
       transform-origin: top left;
     }
 
-    /* 💰 TOP GIFTERS (más grande) */
+    /* 💰 TOP GIFTERS (MUCHO más arriba) */
     .topgifter {
-      top: 100px;
+      top: 60px;   /* 🔼 SUBIDO MÁS */
       right: -50px;
-      width: 380px;
-      height: 260px;
-      transform: scale(0.95);
+      width: 390px;
+      height: 270px;
+      transform: scale(0.98);
       z-index: 8;
     }
 
-    /* ❤️ TOP LIKES (más grande) */
+    /* ❤️ TOP LIKES */
     .topliker {
-      top: 240px;
+      top: 210px;  /* ajustado para acompañar */
       right: -50px;
-      width: 380px;
-      height: 260px;
-      transform: scale(0.95);
+      width: 390px;
+      height: 270px;
+      transform: scale(0.98);
       z-index: 8;
     }
 

@@ -39,9 +39,9 @@
 
     /* 🔔 ALERTS */
     .alerts {
-      top: 140px;
+      top: 130px;
       left: 50%;
-      transform: translateX(-50%) scale(0.9);
+      transform: translateX(-50%) scale(0.95);
       width: 500px;
       height: 200px;
       z-index: 6;
@@ -49,50 +49,51 @@
 
     /* 🔥 ACCIONES */
     .acciones {
-      top: 80px;
+      top: 70px;
       left: 50%;
       transform: translateX(-50%);
-      width: 500px;
+      width: 520px;
       height: 150px;
       z-index: 5;
     }
 
-    /* 💬 CHAT (arreglado para que NO se corte arriba) */
+    /* 💬 CHAT (más arriba y sin recorte) */
     .chat-wrap {
       position: absolute;
-      top: 330px;
+      top: 270px;   /* 🔼 subido */
       left: -5px;
-      width: 260px;
-      height: 400px;
-      overflow: hidden;
+      width: 270px;
+      height: 420px;
+      overflow: visible; /* 🔧 evita corte */
+      z-index: 7;
     }
 
     .chat-wrap iframe {
-      top: 0px; /* 🔧 antes estaba negativo y cortaba arriba */
+      top: 0px;
       left: 0;
-      width: 280px;
-      height: 440px;
-      transform: scale(0.85);
+      width: 300px;
+      height: 460px;
+      transform: scale(0.9); /* un poco más grande */
       transform-origin: top left;
     }
 
-    /* 💰 TOP GIFTERS (más arriba y más grande) */
+    /* 💰 TOP GIFTERS (más grande) */
     .topgifter {
-      top: 120px;
-      right: -60px;
-      width: 340px;
-      height: 240px;
-      transform: scale(0.9);
+      top: 100px;
+      right: -50px;
+      width: 380px;
+      height: 260px;
+      transform: scale(0.95);
       z-index: 8;
     }
 
-    /* ❤️ TOP LIKES (más arriba y más grande) */
+    /* ❤️ TOP LIKES (más grande) */
     .topliker {
-      top: 250px;
-      right: -60px;
-      width: 340px;
-      height: 240px;
-      transform: scale(0.9);
+      top: 240px;
+      right: -50px;
+      width: 380px;
+      height: 260px;
+      transform: scale(0.95);
       z-index: 8;
     }
 
@@ -132,8 +133,8 @@
       src="https://tikfinity.zerody.one/widget/topliker?cid=1638627"></iframe>
 
     <iframe class="meta"
-      src="https://tikfinity.zerody.one/widget/goal?cid=1638627&metric=coins"></iframe> 
- 
-  </div> 
-</body> 
+      src="https://tikfinity.zerody.one/widget/goal?cid=1638627&metric=coins"></iframe>
+
+  </div>
+</body>
 </html>

@@ -1,99 +1,139 @@
-<style>
-  html, body {
-    margin: 0;
-    padding: 0;
-    width: 720px;
-    height: 1280px;
-    background: transparent;
-    overflow: hidden;
-  }
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Overlay TikTok Mekirs</title>
 
-  .canvas {
-    position: relative;
-    width: 720px;
-    height: 1280px;
-  }
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 720px;
+      height: 1280px;
+      background: transparent;
+      overflow: hidden;
+    }
 
-  iframe {
-    position: absolute;
-    border: none;
-    background: transparent;
-  }
+    .canvas {
+      position: relative;
+      width: 720px;
+      height: 1280px;
+    }
 
-  /* 🎆 FUEGOS */
-  .firework {
-    top: -30px;
-    left: 50%;
-    transform: translateX(-50%) scale(1.5);
-    width: 720px;
-    height: 250px;
-    pointer-events: none;
-    z-index: 10;
-  }
+    iframe {
+      position: absolute;
+      border: none;
+      background: transparent;
+    }
 
-  /* 🔔 ALERTS */
-  .alerts {
-    top: 140px;
-    left: 50%;
-    transform: translateX(-50%) scale(0.9);
-    width: 500px;
-    height: 200px;
-    z-index: 6;
-  }
+    /* 🎆 FUEGOS */
+    .firework {
+      top: -30px;
+      left: 50%;
+      transform: translateX(-50%) scale(1.5);
+      width: 720px;
+      height: 250px;
+      pointer-events: none;
+      z-index: 10;
+    }
 
-  /* 🔥 ACCIONES */
-  .acciones {
-    top: 80px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 500px;
-    height: 150px;
-    z-index: 5;
-  }
+    /* 🔔 ALERTS */
+    .alerts {
+      top: 140px;
+      left: 50%;
+      transform: translateX(-50%) scale(0.9);
+      width: 500px;
+      height: 200px;
+      z-index: 6;
+    }
 
-  /* 💬 CHAT (ARREGLADO) */
-  .chat-wrap {
-    position: absolute;
-    top: 310px;
-    left: 0px;
-    width: 280px;
-    height: 420px;
-    overflow: visible; /* 👈 clave */
-  }
+    /* 🔥 ACCIONES */
+    .acciones {
+      top: 80px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 500px;
+      height: 150px;
+      z-index: 5;
+    }
 
-  .chat-wrap iframe {
-    width: 280px;
-    height: 420px;
-    transform: scale(0.85);
-    transform-origin: top left;
-    top: 0; /* 👈 quitado el -40 */
-    left: 0;
-  }
+    /* 💬 CHAT (arreglado para que NO se corte arriba) */
+    .chat-wrap {
+      position: absolute;
+      top: 330px;
+      left: -5px;
+      width: 260px;
+      height: 400px;
+      overflow: hidden;
+    }
 
-  /* 💰 TOP GIFTERS (más grande y más arriba) */
-  .topgifter {
-    top: 120px;
-    right: -40px;
-    width: 340px;
-    height: 230px;
-    transform: scale(0.95);
-  }
+    .chat-wrap iframe {
+      top: 0px; /* 🔧 antes estaba negativo y cortaba arriba */
+      left: 0;
+      width: 280px;
+      height: 440px;
+      transform: scale(0.85);
+      transform-origin: top left;
+    }
 
-  /* ❤️ TOP LIKERS (más grande y alineado) */
-  .topliker {
-    top: 340px;
-    right: -40px;
-    width: 340px;
-    height: 230px;
-    transform: scale(0.95);
-  }
+    /* 💰 TOP GIFTERS (más arriba y más grande) */
+    .topgifter {
+      top: 120px;
+      right: -60px;
+      width: 340px;
+      height: 240px;
+      transform: scale(0.9);
+      z-index: 8;
+    }
 
-  /* 🎯 META */
-  .meta {
-    top: 560px;
-    left: -60px;
-    width: 500px;
-    height: 200px;
-    transform: scale(0.85);
-  }
-</style>
+    /* ❤️ TOP LIKES (más arriba y más grande) */
+    .topliker {
+      top: 250px;
+      right: -60px;
+      width: 340px;
+      height: 240px;
+      transform: scale(0.9);
+      z-index: 8;
+    }
+
+    /* 🎯 META */
+    .meta {
+      top: 520px;
+      left: -60px;
+      width: 500px;
+      height: 200px;
+      transform: scale(0.85);
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="canvas">
+
+    <iframe class="firework"
+      src="https://tikfinity.zerody.one/widget/firework?cid=1638627"></iframe>
+
+    <iframe class="acciones"
+      src="https://tikfinity.zerody.one/widget/myactions?cid=1638627&screen=1"></iframe>
+
+    <iframe class="alerts"
+      src="https://app.streamtoearn.io/overlay/6a507be13a91eda3b1c241c9/alerts/1"></iframe>
+
+    <!-- CHAT -->
+    <div class="chat-wrap">
+      <iframe src="https://tikfinity.zerody.one/widget/chat?cid=1638627"></iframe>
+    </div>
+
+    <iframe class="topgifter"
+      src="https://tikfinity.zerody.one/widget/topgifter?cid=1638627"></iframe>
+
+    <iframe class="topliker"
+      src="https://tikfinity.zerody.one/widget/topliker?cid=1638627"></iframe>
+
+    <iframe class="meta"
+      src="https://tikfinity.zerody.one/widget/goal?cid=1638627&metric=coins"></iframe> 
+ 
+  </div> 
+</body> 
+</html>

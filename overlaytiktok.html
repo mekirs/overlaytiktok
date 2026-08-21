@@ -68,7 +68,7 @@
       z-index: 7;
     }
 
-    .chat-wrap iframe {
+    .chattiktok {
       top: 0px;
       left: 0;
       width: 300px;
@@ -106,23 +106,44 @@
       transform: scale(0.85);
     }
 
+    /* 🎥 EVENTOS YOUTUBE (centro) */
+    .yt-events {
+      top: 520px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 520px;
+      height: 220px;
+      z-index: 9;
+    }
+    
+    .chat2 {
+      position: absolute;
+      top: 320px;
+      left: -5px;
+      width: 270px;
+      height: 220px;
+      overflow: visible;
+      z-index: 7;
+    }
+
+    .chat2 iframe {
+      width: 300px;
+      height: 260px;
+      transform: scale(0.9);
+      transform-origin: top left;
+    }
+
+    
   </style>
 </head>
 
 <body>
   <div class="canvas">
 
-    <iframe class="firework"
-      src="https://tikfinity.zerody.one/widget/firework?cid=1638627"></iframe>
-
     <iframe class="acciones"
       src="https://tikfinity.zerody.one/widget/myactions?cid=1638627&screen=1"></iframe>
 
-    <iframe class="alerts"
-      src="https://app.streamtoearn.io/overlay/6a507be13a91eda3b1c241c9/alerts/1"></iframe>
-
-    <!-- CHAT -->
-    <div class="chat-wrap">
+    <div class="chattiktok">
       <iframe src="https://tikfinity.zerody.one/widget/chat?cid=1638627"></iframe>
     </div>
 
@@ -135,6 +156,13 @@
     <iframe class="meta"
       src="https://tikfinity.zerody.one/widget/goal?cid=1638627&metric=coins"></iframe>
 
+   <iframe class="yt-events"
+      src="https://streamlabs.com/alert-box/v3/DDE91FC3A4933789200B748CF697FA24AC208CC50458DAD18CA90CFF84421A650438A82C24978359D012AAECBBF5A545A56A031B2187F3306BA91B9F15214A56AF12B902C907DAE8CABC2A7C1ADF689F2E873975BAF341B79960D6A8598C4555C5A4E8FFA77DC8CBAC3B4D52BEB0EE419274B92485800559009B9FAC04"></iframe>
+
+    <div class="chatyoutube">
+      <iframe src="https://streamlabs.com/widgets/chat-box/v1/DDE91FC3A4933789200B748CF697FA24AC208CC50458DAD18CA90CFF84421A650438A82C24978359D012AAECBBF5A545A56A031B2187F3306BA91B9F15214A56AF12B902C907DAE8CABC2A7C1ADF689F2E873975BAF341B79960D6A8598C4555C5A4E8FFA77DC8CBAC3B4D52BEB0EE419274B92485800559009B9FAC04"></iframe>
+    </div>
+    
   </div>
 </body>
 </html>
